@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    env: {
+      MONGODB_URL: process.env.MONGODB_URL,
+    },
 
-module.exports = nextConfig
+    experimental: {
+        fallbackNodePolyfills: false,
+    },
+  }
+  
+  module.exports = nextConfig
+
+  

@@ -3,7 +3,7 @@ import mongoose, { Schema } from "mongoose";
 // mongoose.connect(process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URL)
   .then(() => console.log('Database connected!'))
-  .catch(err => console.log('Database connection error:', err));
+  .catch(err => console.error('Database connection error:', err));
 mongoose.Promise = global.Promise;
 
 const ticketSchema = new Schema(
